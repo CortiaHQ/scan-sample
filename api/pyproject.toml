@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parcel-desk-api"
+version = "0.3.1"
+description = "Parcel Desk API"
+requires-python = ">=3.9,<3.10"
+dependencies = [
+    "fastapi==0.103.2",
+    "uvicorn==0.23.2",
+    "pydantic==2.4.2",
+    "sqlalchemy==2.0.21",
+    "psycopg2-binary==2.9.9",
+    "python-dotenv==1.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==7.4.2",
+    "httpx==0.25.0",
+]
+
+[tool.setuptools]
+packages = ["app"]
